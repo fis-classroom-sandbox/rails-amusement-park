@@ -8,3 +8,7 @@ USER gitpod
 # RUN sudo apt-get -q update && #     sudo apt-get install -yq bastet && #     sudo rm -rf /var/lib/apt/lists/*
 #
 # More information: https://www.gitpod.io/docs/config-docker/
+
+ENV APP_HOME /workspace/rails-amusement-park
+ADD Gemfile* APP_HOME
+RUN bundle install
